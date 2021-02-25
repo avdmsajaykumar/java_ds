@@ -1,6 +1,7 @@
 package ds;
 
 import ds.Arrays.sorting.BubbleSort;
+import ds.Arrays.sorting.InsersionSort;
 import ds.Arrays.sorting.SelectionSort;
 
 import java.util.Arrays;
@@ -22,7 +23,11 @@ public class MainClass {
         }
         */
 
-//        System.out.println(Arrays.toString(new BubbleSort().sort()));
+        /*
+        System.out.println(Arrays.toString(new BubbleSort().sort()));
         System.out.println(Arrays.toString(new SelectionSort().sort()));
+
+         */
+        System.out.println(Arrays.toString(new InsersionSort().sort()));
     }
 }
