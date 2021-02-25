@@ -22,5 +22,10 @@ public class BubbleSort {
 
         return intarray;
     }
-
 }
+/* Conditions:
+    - last index will have sorted value after each iteration (largest)
+    - So Each iteration should traverse till last unsorted index
+    - compare successive elements and swap if left index > right index
+    - After final iteration all the indexes are sorted
+     */
