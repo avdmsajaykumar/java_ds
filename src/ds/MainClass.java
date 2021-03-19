@@ -4,6 +4,7 @@ import ds.Arrays.sorting.BubbleSort;
 import ds.Arrays.sorting.InsersionSort;
 import ds.Arrays.sorting.MergeSort;
 import ds.Arrays.sorting.SelectionSort;
+import ds.lists.SingleLinkedList;
 import ds.trees.Tree;
 
 import java.util.Arrays;
@@ -30,7 +31,7 @@ public class MainClass {
         System.out.println(Arrays.toString(new SelectionSort().sort()));
         System.out.println(Arrays.toString(new InsertionSort().sort()));
         System.out.println(Arrays.toString(new MergeSort().sort()));
-         */
+
 
         Tree t = new Tree();
         t.insert(4);
@@ -49,5 +50,16 @@ public class MainClass {
         System.out.println();
         t.traversePostOrder();
 
+         */
+
+        SingleLinkedList list = new SingleLinkedList();
+        list.printAll();
+        list.addToFront("ajay");
+        list.addToFront("kumar");
+        list.addToFront("a v d m s");
+        list.printAll();
+        System.out.println(list.deleteFromFront());
+        System.out.println(list.deleteFromFront());
+        System.out.println(list.getSize());
     }
 }
