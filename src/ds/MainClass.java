@@ -4,6 +4,7 @@ import ds.Arrays.sorting.BubbleSort;
 import ds.Arrays.sorting.InsersionSort;
 import ds.Arrays.sorting.MergeSort;
 import ds.Arrays.sorting.SelectionSort;
+import ds.lists.DoubleLinkedList;
 import ds.lists.SingleLinkedList;
 import ds.trees.Tree;
 
@@ -52,14 +53,31 @@ public class MainClass {
 
          */
 
-        SingleLinkedList list = new SingleLinkedList();
+        DoubleLinkedList list = new DoubleLinkedList();
         list.printAll();
-        list.addToFront("ajay");
         list.addToFront("kumar");
+        list.addToFront("ajay");
         list.addToFront("a v d m s");
         list.printAll();
+        list.addToEnd("Satya");
+        list.addToEnd("Dev");
+        list.addToEnd("Seshagiri Rao");
+        list.printAll();
+        System.out.println(list.deleteFromFront());
         System.out.println(list.deleteFromFront());
         System.out.println(list.deleteFromFront());
         System.out.println(list.getSize());
+        list.printAll();
+        list.addToFront("kumar");
+        list.addToFront("ajay");
+        list.addToFront("a v d m s");
+        System.out.println(list.getSize());
+        list.printAll();
+        System.out.println(list.deleteFromEnd());
+        System.out.println(list.deleteFromEnd());
+        System.out.println(list.deleteFromEnd());
+        System.out.println(list.getSize());
+        list.printAll();
+
     }
 }

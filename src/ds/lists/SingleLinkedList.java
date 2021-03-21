@@ -7,13 +7,17 @@ public class SingleLinkedList {
     int size;
 
     public void addToFront(String value) {
-        Node newNode = new Node(value);
-        newNode.setNext(head);
-        head = newNode;
+        Node node = new Node(value);
+        node.setNext(head);
+        head = node;
         size++;
     }
 
     public String deleteFromFront(){
+
+        if (isEmpty()) {
+            return null;
+        }
 
         String removedElement = head.getElement();
         head = head.getNext();
