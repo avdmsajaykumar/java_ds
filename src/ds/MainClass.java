@@ -4,6 +4,8 @@ import ds.Arrays.sorting.BubbleSort;
 import ds.Arrays.sorting.InsersionSort;
 import ds.Arrays.sorting.MergeSort;
 import ds.Arrays.sorting.SelectionSort;
+import ds.hashset.CustomHashSet;
+import ds.hashset.SimpleHashSet;
 import ds.lists.DoubleLinkedList;
 import ds.lists.SingleLinkedList;
 import ds.trees.Tree;
@@ -28,12 +30,15 @@ public class MainClass {
         */
 
         /*
+        //Test Sorting alogrithms
         System.out.println(Arrays.toString(new BubbleSort().sort()));
         System.out.println(Arrays.toString(new SelectionSort().sort()));
         System.out.println(Arrays.toString(new InsertionSort().sort()));
         System.out.println(Arrays.toString(new MergeSort().sort()));
+        */
 
-
+        /*
+        //Test Tree
         Tree t = new Tree();
         t.insert(4);
         t.insert(32);
@@ -53,6 +58,8 @@ public class MainClass {
 
          */
 
+        /*
+        //Test DoubleLinkedList
         DoubleLinkedList list = new DoubleLinkedList();
         list.printAll();
         list.addToFront("kumar");
@@ -78,6 +85,22 @@ public class MainClass {
         System.out.println(list.deleteFromEnd());
         System.out.println(list.getSize());
         list.printAll();
+        */
 
+        /*
+        // Test HashSets both simple and custom
+        SimpleHashSet hs = new SimpleHashSet();
+        //CustomHashSet hs = new CustomHashSet()
+        System.out.println(hs.contains(1001));
+        hs.add(1001);
+        System.out.println(hs.contains(1001));
+        hs.remove(1001);
+        System.out.println(hs.contains(1001));
+        System.out.println(hs.contains(1002543421));
+        hs.add(861);
+        System.out.println(hs.contains(861));
+        hs.remove(862);
+        System.out.println(hs.contains(861));
+        */
     }
 }
