@@ -7,8 +7,10 @@ import ds.lists.DoubleLinkedList;
 import ds.lists.SingleLinkedList;
 import ds.maps.CustomMap;
 import ds.trees.Tree;
+import hrprograms.Permutation;
 import hrprograms.Singleton;
 
+import java.sql.SQLOutput;
 import java.util.Arrays;
 
 public class MainClass {
@@ -52,6 +54,7 @@ public class MainClass {
         System.out.println(one.getA() + "\t" + one.getB());
          */
 
+        /* Testing CustomMap
         CustomMap m = new CustomMap();
         m.set(1, 5);
         m.set(2, 6);
@@ -70,6 +73,7 @@ public class MainClass {
         m.set(3, 7);
         m.set(2, 8);
         System.out.println(m.get(1) + "\t" + m.get(2) + "\t" + m.get(3) + "\t" + m.get(4));
+         */
 
         /*
         //Test Tree
@@ -136,5 +140,10 @@ public class MainClass {
         hs.remove(862);
         System.out.println(hs.contains(861));
         */
+
+        /* Testing Permutations
+        new Permutation("abc").listAll();
+        new Permutation("6789").listAll();
+         */
     }
 }
