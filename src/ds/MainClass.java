@@ -1,14 +1,13 @@
 package ds;
 
-import ds.Arrays.sorting.BubbleSort;
-import ds.Arrays.sorting.InsersionSort;
-import ds.Arrays.sorting.MergeSort;
-import ds.Arrays.sorting.SelectionSort;
+import ds.Arrays.sorting.*;
 import ds.hashset.CustomHashSet;
 import ds.hashset.SimpleHashSet;
 import ds.lists.DoubleLinkedList;
 import ds.lists.SingleLinkedList;
+import ds.maps.CustomMap;
 import ds.trees.Tree;
+import hrprograms.Singleton;
 
 import java.util.Arrays;
 
@@ -35,7 +34,42 @@ public class MainClass {
         System.out.println(Arrays.toString(new SelectionSort().sort()));
         System.out.println(Arrays.toString(new InsertionSort().sort()));
         System.out.println(Arrays.toString(new MergeSort().sort()));
+        System.out.println(Arrays.toString(new QuickSort().sort()));
+        System.out.println(Arrays.toString(new QuickSort().sort()));
         */
+
+        /* Singleton class checks
+        Singleton one = Singleton.getInstance();
+        Singleton two = Singleton.getInstance();
+
+        one.setA(10);
+        one.setB(20);
+
+        System.out.println(two.getA() + "\t" + two.getB());
+
+        two.setA(15);
+        one.setB(25);
+        System.out.println(one.getA() + "\t" + one.getB());
+         */
+
+        CustomMap m = new CustomMap();
+        m.set(1, 5);
+        m.set(2, 6);
+        m.set(3, 7);
+        m.set(2, 8);
+        System.out.println(m.get(1) + "\t" + m.get(2) + "\t" + m.get(3) + "\t" + m.get(4));
+        m.setAll(10);
+        System.out.println(m.get(1) + "\t" + m.get(2) + "\t" + m.get(3) + "\t" + m.get(4));
+        m.set(1, 1);
+        m.set(4, 11);
+        System.out.println(m.get(1) + "\t" + m.get(2) + "\t" + m.get(3) + "\t" + m.get(4));
+        m.removeAll();
+        System.out.println(m.get(1) + "\t" + m.get(2) + "\t" + m.get(3) + "\t" + m.get(4));
+        m.set(1, 5);
+        m.set(2, 6);
+        m.set(3, 7);
+        m.set(2, 8);
+        System.out.println(m.get(1) + "\t" + m.get(2) + "\t" + m.get(3) + "\t" + m.get(4));
 
         /*
         //Test Tree
