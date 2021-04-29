@@ -82,9 +82,7 @@ class TreeNode {
                 if (node.getRightNode() != null) {
                     queue.add(node.getRightNode());
                 }
-
             }
-
         }
     }
 
