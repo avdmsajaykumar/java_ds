@@ -75,7 +75,7 @@ public class MainClass {
         System.out.println(m.get(1) + "\t" + m.get(2) + "\t" + m.get(3) + "\t" + m.get(4));
          */
 
-        /*
+//        /*
         //Test Tree
         Tree t = new Tree();
         t.insert(4);
@@ -93,8 +93,10 @@ public class MainClass {
         t.traversePreOrder();
         System.out.println();
         t.traversePostOrder();
+        System.out.println();
+        t.traverseLevelOrder();
 
-         */
+//         */
 
         /*
         //Test DoubleLinkedList
@@ -146,6 +148,7 @@ public class MainClass {
         new Permutation("6789").listAll();
          */
 
+        /* SingleLinkedList testing
         SingleLinkedList<Integer> sl = new SingleLinkedList<>();
         sl.addToFront(1);
         sl.addToFront(2);
@@ -159,5 +162,6 @@ public class MainClass {
         sl.printAll();
         sl.swap(3,6);
         sl.printAll();
+         */
     }
 }

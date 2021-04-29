@@ -1,5 +1,8 @@
 package ds.trees;
 
+import java.util.LinkedList;
+import java.util.Queue;
+
 public class Tree {
     private TreeNode root;
 
@@ -18,6 +21,10 @@ public class Tree {
 
     public void traversePostOrder() {
         if (root != null) root.traversePostOrder();
+    }
+
+    public void traverseLevelOrder(){
+        if (root != null) root.traverseLevelOrder();
     }
 
 }
@@ -59,6 +66,28 @@ class TreeNode {
 
     }
 
+
+    public void traverseLevelOrder() {
+
+        Queue<TreeNode> queue = new LinkedList<>();
+        queue.add(this);
+        while(!queue.isEmpty()){
+            int size = queue.size();
+            for (int i = 0; i < size; i++) {
+                TreeNode node =queue.poll();
+                System.out.print(node.getValue() + " ");
+                if (node.getLeftNode() != null) {
+                    queue.add(node.getLeftNode());
+                }
+                if (node.getRightNode() != null) {
+                    queue.add(node.getRightNode());
+                }
+
+            }
+
+        }
+    }
+
     public TreeNode(int value) {
         this.value = value;
     }
@@ -86,4 +115,5 @@ class TreeNode {
     public void setRightNode(TreeNode rightNode) {
         this.rightNode = rightNode;
     }
+
 }
