@@ -1,13 +1,13 @@
 package ds.lists;
 
-public class DoubleLinkedList {
+public class DoubleLinkedList<T> {
 
-    Node head;
-    Node tail;
+    Node<T> head;
+    Node<T> tail;
     int size;
 
-    public void addToFront(String element){
-        Node node = new Node(element);
+    public void addToFront(T element){
+        Node<T> node = new Node<>(element);
         node.setNext(head);
         if (head == null) {
             tail = node;
@@ -18,8 +18,8 @@ public class DoubleLinkedList {
         size++;
     }
 
-    public void addToEnd(String element) {
-        Node node = new Node(element);
+    public void addToEnd(T element) {
+        Node<T> node = new Node<>(element);
         node.setPrev(tail);
         if (tail == null) {
             head = node;
@@ -30,13 +30,13 @@ public class DoubleLinkedList {
         size++;
     }
 
-    public String deleteFromFront(){
+    public T deleteFromFront(){
 
         if (isEmpty()) {
             return null;
         }
 
-        String removedElement = head.getElement();
+        T removedElement = head.getElement();
 
         if (head.getNext() == null) {
             tail = null;
@@ -49,12 +49,12 @@ public class DoubleLinkedList {
         return removedElement;
     }
 
-    public String deleteFromEnd(){
+    public T deleteFromEnd(){
         if (isEmpty()) {
             return null;
         }
 
-        String element = tail.getElement();
+        T element = tail.getElement();
 
         if (tail.getPrev() == null) {
             head = null;
@@ -80,7 +80,7 @@ public class DoubleLinkedList {
             return;
         }
 
-        Node current = head;
+        Node<T> current = head;
         System.out.print("Head -> ");
         while (current != null) {
             System.out.print(current.getElement());
@@ -91,19 +91,19 @@ public class DoubleLinkedList {
 
     }
 
-    public Node getHead() {
+    public Node<T> getHead() {
         return head;
     }
 
-    public void setHead(Node head) {
+    public void setHead(Node<T> head) {
         this.head = head;
     }
 
-    public Node getTail() {
+    public Node<T> getTail() {
         return tail;
     }
 
-    public void setTail(Node tail) {
+    public void setTail(Node<T> tail) {
         this.tail = tail;
     }
 }

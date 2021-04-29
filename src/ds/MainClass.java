@@ -98,7 +98,7 @@ public class MainClass {
 
         /*
         //Test DoubleLinkedList
-        DoubleLinkedList list = new DoubleLinkedList();
+        DoubleLinkedList<String> list = new DoubleLinkedList<>();
         list.printAll();
         list.addToFront("kumar");
         list.addToFront("ajay");
@@ -145,5 +145,19 @@ public class MainClass {
         new Permutation("abc").listAll();
         new Permutation("6789").listAll();
          */
+
+        SingleLinkedList<Integer> sl = new SingleLinkedList<>();
+        sl.addToFront(1);
+        sl.addToFront(2);
+        sl.addToFront(3);
+        sl.addToFront(4);
+        sl.addToFront(5);
+        sl.printAll();
+        sl.swap(2,4);
+        sl.printAll();
+        sl.swap(1,5);
+        sl.printAll();
+        sl.swap(3,6);
+        sl.printAll();
     }
 }

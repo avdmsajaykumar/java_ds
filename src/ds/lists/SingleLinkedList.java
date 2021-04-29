@@ -1,25 +1,25 @@
 package ds.lists;
 
-public class SingleLinkedList {
+public class SingleLinkedList<T> {
 
-    Node head;
+    Node<T> head;
 
     int size;
 
-    public void addToFront(String value) {
-        Node node = new Node(value);
+    public void addToFront(T value) {
+        Node<T> node = new Node<>(value);
         node.setNext(head);
         head = node;
         size++;
     }
 
-    public String deleteFromFront(){
+    public T deleteFromFront(){
 
         if (isEmpty()) {
             return null;
         }
 
-        String removedElement = head.getElement();
+        T removedElement = head.getElement();
         head = head.getNext();
         size--;
         return removedElement;
@@ -39,7 +39,7 @@ public class SingleLinkedList {
             return;
         }
 
-        Node current = head;
+        Node<T> current = head;
         System.out.print("Head -> ");
         while (current != null) {
             System.out.print(current.getElement());
@@ -47,6 +47,44 @@ public class SingleLinkedList {
             current = current.next;
         }
         System.out.println("null");
+
+    }
+
+    public void swap(T a, T b){
+        if (a == b) return;
+
+        Node<T> prevA = null, prevB = null;
+        Node<T> currA = head, currB = head;
+
+
+        while (currA != null && !currA.getElement().equals(a)){
+            prevA = currA;
+            currA = currA.getNext();
+
+        }
+
+        while (currB != null && !currB.getElement().equals(b)){
+            prevB = currB;
+            currB = currB.getNext();
+        }
+
+        if (currA == null || currB == null) return;
+
+        if (prevA != null) {
+            prevA.setNext(currB);
+        }else{
+            head = currB;
+        }
+
+        if (prevB != null){
+            prevB.setNext(currA);
+        }else {
+            head = currA;
+        }
+
+        Node<T> temp = currA.getNext();
+        currA.setNext(currB.getNext());
+        currB.setNext(temp);
 
     }
 }
