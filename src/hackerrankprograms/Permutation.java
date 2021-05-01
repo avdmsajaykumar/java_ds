@@ -1,4 +1,4 @@
-package hrprograms;
+package hackerrankprograms;
 
 public class Permutation {
 
@@ -21,6 +21,10 @@ public class Permutation {
                 perm(restOfString, result + index);
             }
         }
+    }
+
+    public static void main(String[] args) {
+        new Permutation("abcd").listAll();
     }
 
 }

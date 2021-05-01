@@ -1,4 +1,4 @@
-package hrprograms;
+package hackerrankprograms;
 
 
 import java.util.Arrays;

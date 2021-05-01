@@ -1,4 +1,4 @@
-package hrprograms;
+package hackerrankprograms;
 
 public class StringsToAscendingFormat {
 

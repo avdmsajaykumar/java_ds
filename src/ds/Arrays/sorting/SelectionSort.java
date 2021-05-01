@@ -2,11 +2,12 @@ package ds.Arrays.sorting;
 
 import java.util.Arrays;
 
-public class SelectionSort {
+public class SelectionSort implements Sort {
 
     //Unstable Algorithm
 
     public int[] sort() {
+        System.out.println("SelectionSort");
         int[] intarray = {2, 4, 73, 12, 3, 65, 341, 0, -21};
         System.out.println(Arrays.toString(intarray));
 

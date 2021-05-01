@@ -3,9 +3,10 @@ package ds.Arrays.sorting;
 import java.util.Arrays;
 
 //stable
-public class MergeSort {
+public class MergeSort implements Sort {
 
     public int[] sort() {
+        System.out.println("MergeSort");
         int[] intarray = {2, 4, 73, 12, 3, 65, 341, 0, -21};
 //        int[] intarray = {2, 73, 12, 11};
         System.out.println(Arrays.toString(intarray));

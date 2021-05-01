@@ -2,10 +2,11 @@ package ds.Arrays.sorting;
 
 import java.util.Arrays;
 
-public class InsersionSort {
+public class InsertionSort implements Sort{
 
 
     public int[] sort() {
+        System.out.println("InsertionSort");
         int[] intarray = {2, 4, 73, 12, 3, 65, 341, 0, -21};
         System.out.println(Arrays.toString(intarray));
 
