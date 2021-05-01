@@ -50,6 +50,34 @@ public class SingleLinkedList<T> {
 
     }
 
+    //1 2 3 4 5 6 7 8 9 10
+
+    public T PopNthIndexFromBack(Integer index){
+
+        T result = null;
+
+        Node <T> fastNode = head;
+        Node<T> slowNode = head;
+
+        if (head == null) return null;
+
+        for (int i = 0; i < index; i++) {
+            if (fastNode.getNext() != null){
+                fastNode = fastNode.getNext();
+            }else return null;
+        }
+
+        while (fastNode.getNext() != null){
+            slowNode = slowNode.getNext();
+            fastNode = fastNode.getNext();
+        }
+
+        result = slowNode.getElement();
+        slowNode.setNext(slowNode.getNext().getNext());
+        return result;
+
+    }
+
     public void swap(T a, T b){
         if (a == b) return;
 

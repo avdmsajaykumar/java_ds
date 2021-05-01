@@ -148,7 +148,7 @@ public class MainClass {
         new Permutation("6789").listAll();
          */
 
-        /* SingleLinkedList testing
+//        /* SingleLinkedList testing
         SingleLinkedList<Integer> sl = new SingleLinkedList<>();
         sl.addToFront(1);
         sl.addToFront(2);
@@ -156,12 +156,14 @@ public class MainClass {
         sl.addToFront(4);
         sl.addToFront(5);
         sl.printAll();
-        sl.swap(2,4);
+//        sl.swap(2,4);
         sl.printAll();
-        sl.swap(1,5);
+//        sl.swap(1,5);
         sl.printAll();
-        sl.swap(3,6);
+//        sl.swap(3,6);
         sl.printAll();
-         */
+        sl.PopNthIndexFromBack(6);
+        sl.printAll();
+//         */
     }
 }
