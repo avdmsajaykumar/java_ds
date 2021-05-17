@@ -35,10 +35,8 @@ public class Braces {
                         recentEncounteredOpen = -1;
                         openBraces.pop();
                     } else if (
-                            openFlowers.isEmpty()
-                                    || (!openFlowers.isEmpty()
-                                    && openBraces.size() >= openFlowers.size()
-                                    && (openBraces.peek() > openFlowers.peek()))
+                            openFlowers.isEmpty() ||
+                                    openBraces.size() >= openFlowers.size() && openBraces.peek() > openFlowers.peek()
                     ) {
                         openBraces.pop();
                         recentEncounteredOpen = -1;
@@ -46,9 +44,7 @@ public class Braces {
                         return new String(input, openFlowers.peek(), input.length - openFlowers.peek()) + " is Unstable";
                     }
                 } else {
-                    if (openBraces.isEmpty()) {
-                        return new String(input) + " is Unstable";
-                    }
+                    return new String(input) + " is Unstable";
                 }
 
             } else if (input[i] == '}') {
@@ -58,10 +54,8 @@ public class Braces {
                         recentEncounteredOpen = -1;
                         openFlowers.pop();
                     } else if (
-                            openBraces.isEmpty()
-                                    || (!openBraces.isEmpty()
-                                    && openFlowers.size() >= openBraces.size()
-                                    && (openFlowers.peek() > openBraces.peek()))
+                            openBraces.isEmpty() ||
+                                    openFlowers.size() >= openBraces.size() && openFlowers.peek() > openBraces.peek()
                     ) {
                         openFlowers.pop();
                         recentEncounteredOpen = -1;
@@ -69,9 +63,7 @@ public class Braces {
                         return new String(input, openBraces.peek(), input.length - openFlowers.peek()) + " is Unstable";
                     }
                 } else {
-                    if (openFlowers.isEmpty()) {
-                        return new String(input) + " is Unstable";
-                    }
+                    return new String(input) + " is Unstable";
                 }
             }
         }
