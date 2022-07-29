@@ -17,7 +17,7 @@ public class MultiThreadingBank {
 
 class BankDeposit implements Runnable {
 
-    Bank bank = Bank.getInstance();
+    final Bank bank = Bank.getInstance();
 
     @Override
     public void run() {
@@ -44,7 +44,7 @@ class BankDeposit implements Runnable {
 
 class BankWithdraw implements Runnable {
 
-    Bank bank = Bank.getInstance();
+    final Bank bank = Bank.getInstance();
 
     private void withdrawAmount(int amount) throws InterruptedException {
         while (amount > bank.getMoney()) {
@@ -71,26 +71,19 @@ class BankWithdraw implements Runnable {
 class Bank {
 
     private static Bank bank;
-
     public int getMoney() {
         return money;
     }
-
     private int money = 0;
-
     public void deposit(int amount) {
         money = money + amount;
     }
-
     public String withdraw(int amount) {
         money = money - amount;
         return String.valueOf(amount);
     }
-
     private Bank() {
-
     }
-
     public static Bank getInstance() {
         if (bank == null) {
             bank = new Bank();
