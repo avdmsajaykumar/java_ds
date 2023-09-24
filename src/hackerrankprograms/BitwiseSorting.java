@@ -38,11 +38,11 @@ public class BitwiseSorting {
                 }
                 else {
                     nodes.add(i, new Node(value, bits));
-                    return;
+                    break;
                 }
             } else {
                 nodes.add(i, new Node(value, bits));
-                return;
+                break;
             }
         }
     }
