@@ -1,4 +1,4 @@
-package ciscointerview;
+package Interview.cisco;
 
 public class MultiThreading {
     public static final Account account = new Account();

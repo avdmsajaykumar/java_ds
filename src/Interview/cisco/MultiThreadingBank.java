@@ -1,4 +1,4 @@
-package ciscointerview;
+package Interview.cisco;
 
 public class MultiThreadingBank {
 
