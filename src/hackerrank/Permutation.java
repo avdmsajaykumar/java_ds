@@ -2,7 +2,7 @@ package hackerrank;
 
 public class Permutation {
 
-    private String input;
+    private final String input;
 
     public Permutation(String input){
         this.input = input;

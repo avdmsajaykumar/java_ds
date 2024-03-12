@@ -11,7 +11,6 @@ public class MinMax {
     }
 
     static Integer min1, min2, max1, max2;
-    static Integer length = 25;
     static List<Integer> array = new ArrayList<>();
 
 
@@ -25,7 +24,6 @@ public class MinMax {
     }
 
     static void Random(){
-        Random random = new Random();
         array = new Random()
                 .ints(-1000, 1000)
                 .limit(25)
@@ -39,8 +37,7 @@ public class MinMax {
         min2 = array.get(0);
         max1 = array.get(0);
         max2 = array.get(0);
-        for (int i=0; i < array.size(); i++) {
-            Integer j = array.get(i);
+        for (Integer j : array) {
             if (j < min1) {
                 min2 = min1;
                 min1 = j;

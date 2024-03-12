@@ -29,20 +29,16 @@ public class BitwiseSorting {
         }
 
         for (int i=0; i<nodes.size();i++){
-            if(nodes.get(i).bits() > bits) {
-                continue;
-            }
-            else if(nodes.get(i).bits().equals(bits)){
-                if (nodes.get(i).value() > value) {
-                    continue;
-                }
-                else {
+            if (nodes.get(i).bits() <= bits) {
+                if(nodes.get(i).bits().equals(bits)){
+                    if (nodes.get(i).value() <= value) {
+                        nodes.add(i, new Node(value, bits));
+                        break;
+                    }
+                } else {
                     nodes.add(i, new Node(value, bits));
                     break;
                 }
-            } else {
-                nodes.add(i, new Node(value, bits));
-                break;
             }
         }
     }

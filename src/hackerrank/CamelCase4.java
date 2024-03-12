@@ -9,19 +9,16 @@ public class CamelCase4 {
         Scanner scanner = new Scanner(System.in);
 
         while(scanner.hasNext()){
-            String out = "";
+            String out;
             String input = scanner.nextLine();
             String[] split = input.split(";");
 //            Arrays.stream(split).forEach(System.out::println);
-            switch (split[0]){
-                case "S":
-                   out = split(split);
-                   break;
-                case "C":
-                    out = combine(split);
-                    break;
-                default:
+            switch (split[0]) {
+                case "S" -> out = split(split);
+                case "C" -> out = combine(split);
+                default -> {
                     return;
+                }
             }
             System.out.println(out);
         }
