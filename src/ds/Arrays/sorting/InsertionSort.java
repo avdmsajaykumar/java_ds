@@ -4,25 +4,29 @@ import java.util.Arrays;
 
 public class InsertionSort implements Sort{
 
+    public static void main(String[] args) {
+        Sort sort = new InsertionSort();
+        System.out.println(Arrays.toString(sort.sort()));
+    }
 
     public int[] sort() {
         System.out.println("InsertionSort");
-        int[] intarray = {2, 4, 73, 12, 3, 65, 341, 0, -21};
-        System.out.println(Arrays.toString(intarray));
+        int[] intArray = {2, 4, 73, 12, 3, 65, 341, 0, -21};
+        System.out.println(Arrays.toString(intArray));
 
-        for (int unsortedIndex = 1; unsortedIndex < intarray.length; unsortedIndex++) {
+        for (int unsortedIndex = 1; unsortedIndex < intArray.length; unsortedIndex++) {
 
-            int newElement = intarray[unsortedIndex];
+            int newElement = intArray[unsortedIndex];
 
             int i;
-            for (i = unsortedIndex; i > 0 && intarray[i - 1] > newElement; i--) {
-                intarray[i] = intarray[i - 1];
+            for (i = unsortedIndex; i > 0 && intArray[i - 1] > newElement; i--) {
+                intArray[i] = intArray[i - 1];
             }
-            intarray[i] = newElement;
+            intArray[i] = newElement;
         }
 
 
-        return intarray;
+        return intArray;
     }
 }
 /* Conditions

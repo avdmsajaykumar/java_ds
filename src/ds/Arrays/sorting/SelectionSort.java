@@ -4,28 +4,32 @@ import java.util.Arrays;
 
 public class SelectionSort implements Sort {
 
+    public static void main(String[] args) {
+        Sort sort = new SelectionSort();
+        System.out.println(Arrays.toString(sort.sort()));
+    }
     //Unstable Algorithm
 
     public int[] sort() {
         System.out.println("SelectionSort");
-        int[] intarray = {2, 4, 73, 12, 3, 65, 341, 0, -21};
-        System.out.println(Arrays.toString(intarray));
+        int[] intArray = {2, 4, 73, 12, 3, 65, 341, 0, -21};
+        System.out.println(Arrays.toString(intArray));
 
-        for (int lastIndex = intarray.length - 1; lastIndex > 0; lastIndex--) {
+        for (int lastIndex = intArray.length - 1; lastIndex > 0; lastIndex--) {
 
             int largeElementIndex = 0;
             for (int i = 0; i <= lastIndex; i++) {
-                if (intarray[i] > intarray[largeElementIndex]) {
+                if (intArray[i] > intArray[largeElementIndex]) {
                     largeElementIndex = i;
                 }
             }
 
-            int temp = intarray[lastIndex];
-            intarray[lastIndex] = intarray[largeElementIndex];
-            intarray[largeElementIndex] = temp;
+            int temp = intArray[lastIndex];
+            intArray[lastIndex] = intArray[largeElementIndex];
+            intArray[largeElementIndex] = temp;
         }
 
-        return intarray;
+        return intArray;
     }
 }
 

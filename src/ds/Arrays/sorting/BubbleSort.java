@@ -4,8 +4,13 @@ import java.util.Arrays;
 
 public class BubbleSort implements Sort{
 
-    //Stable if comparision is only > or <
-    // if we use >= or <= while comparision it will become unstable
+    public static void main(String[] args) {
+        Sort sort = new BubbleSort();
+        System.out.println(Arrays.toString(sort.sort()));
+    }
+
+    //Stable if comparison is only > or <
+    // if we use >= or <= while comparison it will become unstable
     public int[] sort() {
         System.out.println("BubbleSort");
         int[] intarray = {2, 4, 73, 12, 3, 65, 341, 0, -21};

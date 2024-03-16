@@ -4,16 +4,19 @@ import java.util.Arrays;
 
 //stable
 public class MergeSort implements Sort {
-
+    public static void main(String[] args) {
+        Sort sort = new MergeSort();
+        System.out.println(Arrays.toString(sort.sort()));
+    }
     public int[] sort() {
         System.out.println("MergeSort");
-        int[] intarray = {2, 4, 73, 12, 3, 65, 341, 0, -21};
-//        int[] intarray = {2, 73, 12, 11};
-        System.out.println(Arrays.toString(intarray));
+        int[] intArray = {2, 4, 73, 12, 3, 65, 341, 0, -21};
+//        int[] intArray = {2, 73, 12, 11};
+        System.out.println(Arrays.toString(intArray));
 
-        split(intarray, 0, intarray.length);
+        split(intArray, 0, intArray.length);
 
-        return intarray;
+        return intArray;
 
     }
 
